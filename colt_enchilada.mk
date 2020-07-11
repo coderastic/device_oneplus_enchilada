@@ -21,16 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common AOSP stuff.
 IS_PHONE := true
 TARGET_DENSITY := xxxhdpi
-TARGET_BOOT_ANIMATION_RES := 1440
-REVENGEOS_BUILDTYPE := OFFICIAL
+
+#Colt Stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+COLT_BUILDTYPE := OFFICIAL
+COLT_DEVICE_MAINTAINER := coderastic
 
 # Inherit from enchilada device
 $(call inherit-product, device/oneplus/enchilada/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/revengeos/config/common.mk)
+$(call inherit-product, vendor/colt/config/common.mk)
 
-PRODUCT_NAME := revengeos_enchilada
+PRODUCT_NAME := colt_enchilada
 PRODUCT_DEVICE := enchilada
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
